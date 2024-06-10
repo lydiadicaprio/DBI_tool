@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.v5.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap/geonet.v7.css">
+  <link rel="stylesheet" href="./assets/font/font-awesome.min.css">
+
+  <title>Tools:DBI</title>
+</head>
+<body>
+  <div class="container pt-1">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <h3>DBI (Dimensionless Blockage Index)</h3>
+        <p>The Dimensionless Blockage Index (DBI) tool indicates how stable a landslide dam is, given dam height and volume, and catchment area upstream of the dam.</p>
+        <ul class="nav nav-tabs">
+          <li class="nav-item secondary-tab">
+              <a class="nav-link active" href="./about.html">About</a>
+          </li>
+          <li class="nav-item secondary-tab">
+              <a class="nav-link " href="./tool.html">Tool</a>
+          </li>
+          <li class="nav-item secondary-tab">
+            <a class="nav-link " href="./user-guide.html">User Guide</a>
+          </li>
+        </ul>
+        <br/>
+      </div>
+    </div>
+    <div class="markdown-body">
+      <h4>Introduction</h4>
+      <hr class="section">
+      <p>
+        Landslide dams are ephemeral or enduring blockages of a stream by a landslide. They are part of multi-hazard, cascading slope-river systems. Landslide dams may form in diverse geographical environments and can result from various kinds of mass movements, such as debris and rock avalanches, falls, and slides, with triggers such as earthquakes, rainfall, volcanic eruptions, and fluvial erosion. 
+      </p>
+      <p>
+        They can threaten upstream areas when lakes form behind them, and particularly areas downstream if dam breaching and downstream inundation and flooding occur. Most landslide dams fail by overtopping shortly after their formation. Up to 40% of dam collapses were recorded one day after their formation, whereas up to 85% failed within one year<sup>1-3</sup>. 
+      </p>
+      <p>
+        Their stability is thus critical to assess. The Dimensionless Blockage Index (DBI)<sup>1</sup> is the most commonly used geometric index in assessing landslide dam stability, based on previous case studies. 
+      </p>
+      <div class="figure my-3">
+        <img src="./assets/images/survival-time.png" class="figure-img mx-auto d-block" width="550">
+        <figcaption class="figure-caption">
+          Survival time before the failure of landslide dams, based on 205 case histories (Ermini & Casagli 2003)
+        </figcaption>
+      </div>
+      <h4>The Dimensionless Blockage Index</h4>
+      <hr class="section">
+      <p>
+        The DBI was originally based on existing geomorphometric relationships and analysis of 84 global records<sup>1</sup>. It was further tested on 300 cases in the Italian Alps in 2016<sup>2</sup>. 
+      </p>
+      <p>
+        The stability of a landslide dam was found to be related to the ratio of the following geomorphic parameters:
+      </p>
+      <ul>
+        <li>the dam volume, considered as the main stabilizing factor since it controls the dam self-weight;</li>
+        <li>the watershed area upstream of the dam, considered as the main destabilizing factor since it controls the channel discharge and stream power and indirectly the dam shape.</li>
+      </ul>
+      <div class="figure my-3">
+        <img src="./assets/images/formula.png" class="figure-img mx-auto d-block" width="150">
+        <p>
+          where A<sub>C</sub> = upstream catchment area (m<sup>2</sup>), H<sub>D</sub> = maximum height of dam (m), and V<sub>D</sub> = volume of dam (m<sup>3</sup>).
+        </p>
+      </div>
+      <h4>Updating DBI</h4>
+      <hr class="section">
+      <p>
+        Using the newly released New Zealand Landslide Dam Database<sup>5</sup>, we have reanalysed the DBI and determined Probability of Failure (POF) values based on 266 cases within Aotearoa New Zealand. 
+      </p>
+      <table class="table w-25 ">
+        <tr>
+          <th>POF</th>
+          <th>DBI</th>
+        </tr>
+        <tr>
+          <td>90%</td>
+          <td>3.95</td>
+        </tr>
+        <tr>
+          <td>75%</td>
+          <td>3.10</td>
+        </tr>
+        <tr>
+          <td>50%</td>
+          <td>2.07</td>
+        </tr>
+        <tr>
+          <td>25%</td>
+          <td>1.38</td>
+        </tr>
+        <tr>
+          <td>10%</td>
+          <td>1.08</td>
+        </tr>
+      </table>
+      <h4>Possible improvements to the model</h4>
+      <hr class="section">
+      <p>
+        Possible improvements to this empirical model could be made by considering other variables and setting up a wider database in order to reach conclusions based on a statistical analysis using more rigorous statistical methods, such as parametric univariate (ANOVA) and multivariate methods. 
+      </p>
+      <h4 id="limitations-disclaimers">Limitations and disclaimers</h4>
+      <hr class="section">
+      <p>
+        The data and model on which this Tool is based, and the creation of the tool, were prepared by the Institute of Geological & Nuclear Sciences Limited (GNS Science) as part of a New Zealand Government funded research project (MBIE Endeavour - C05X1709). The information is derived from multiple data sources, including third party data, which are at various scales and resolutions. The tool in this context is defined as the data, model and process that allows the user to forecast the probability of failure of a landslide dam based on landslide dam height and volume, and upstream catchment area. The algorithm (model) underpinning the tool is based on the DBI<sup>1,4</sup>.
+      </p>
+      <p>
+        As there is always uncertainty associated with the data used and the models developed from it, GNS Science gives no warranties of any kind concerning its assessment and estimates, including accuracy, completeness, timeliness or fitness for purpose, and accepts no responsibility for any actions taken based on or reliance placed on the forecasts by any person or organisation. GNS Science excludes to the full extent permitted by law any liability to any person or organisation for any loss, damage or expense, direct or indirect, and however caused, whether through negligence or otherwise, resulting from any person or organisation's use of or reliance on the Tool, the results from it and the data it is based on.
+      </p>
+      <p>
+        The DBI considers three geomorphometric parameters (dam height and volume and upstream catchment area), and is thus indicative only for preliminary forecasting on the stability of landslide dams. It is not a substitute for a deterministic breach model that estimates hydrographs resulting from dam failures. It is recommended that on-site assessment of dam stability be carried out, particularly where people, buildings and infrastructure could be at risk. The Tool is intended to be used by suitably qualified people (e.g., Professional engineering geologists and geotechnical engineers) as part of their regional-scale ‘desktop’ assessment. This Tool should not be used as a replacement or substitute for site-specific analyses and assessments.
+      </p>
+      <h4>References</h4>
+      <hr class="section">
+      <p>
+        1 Ermini L, Casagli N (2003) Prediction of the behaviour of landslide dams using a geomorphological dimensionless index. Earth Surface Processes and Landforms 28(1):31-47.
+      </p>
+      <p>
+        2 Costa JE and Schuster RL (1988) The formation and failure of natural dams. Geological society of America bulletin. 100(7), pp1054-1068
+      </p>  
+      <p>
+        3 Fan X, Dufresne A, Subramanian SS, Strom A, Hermanns R, Stefanelli CT, Hewitt K, Yunus AP, Dunning S, Capra L and Geertsema M (2020) The formation and impact of landslide dams–State of the art. Earth-Science Reviews 203:103116, DOI: https://doi.org/10.1016/j.earscirev.2020.103116.
+      </p>
+      <p>
+        4 Tacconi Stefanelli, C., Segoni, S., Casagli, N., Catani, F. (2016). Geomorphic indexing of landslide dams evolution. Engineering Geology, 208:1-10. 
+      </p>
+      <p>
+        5 Morgenstern, R., Wolter, A., Cox, S.C., Lukovic, B., Bain, D., Sirohi, A., Bruce, Z., Jones, K., Rosser, B., Townsend, D., Massey, C. (submitted). The New Zealand Landslide Dam Database, v1.0. Landslides.
+      </p>
+    </div>
+  </div>
+  <script src="./assets/bootstrap/bootstrap.v5.bundle.min.js"></script>
+</body>
+</html>
+

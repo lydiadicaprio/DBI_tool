@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.v5.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap/geonet.v7.css">
+  <link rel="stylesheet" href="./assets/font/font-awesome.min.css">
+
+  <script src="./assets/plotly/plotly-2.32.0.min.js"></script>
+
+  <title>Tools:DBI</title>
+</head>
+<body>
+  <div class="container pt-1">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <h3>DBI (Dimensionless Blockage Index)</h3>
+        <p>The Dimensionless Blockage Index (DBI) tool indicates how stable a landslide dam is, given dam height and volume, and catchment area upstream of the dam.</p>
+        <ul class="nav nav-tabs">
+          <li class="nav-item secondary-tab">
+              <a class="nav-link " href="./about.html">About</a>
+          </li>
+          <li class="nav-item secondary-tab">
+              <a class="nav-link active" href="./tool.html">Tool</a>
+          </li>
+          <li class="nav-item secondary-tab">
+            <a class="nav-link " href="./user-guide.html">User Guide</a>
+          </li>
+        </ul>
+        <br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-4">
+        <form id="calculatorInput">
+          <div class="card">
+            <div class="card-header">
+              <strong>Variable inputs</strong>
+            </div>
+            <div class="card-body">
+              <div class="mb-3">
+                <label class= "col-form-label col-form-label-sm" for="area">Upstream Catchment Area (m<sup>2</sup>)</label>
+                <input class= "form-control" type="number" id="area" name="area" step="any" required> 
+              </div>
+              <div class="mb-3">
+                <label class= "col-form-label col-form-label-sm" for="volume">Landslide Dam Volume (m<sup>3</sup>)</label>
+                <input class= "form-control" type="number" id="volume" name="volume" step="any" required> 
+              </div>
+              <div class="mb-3">
+                <label class= "col-form-label col-form-label-sm" for="height">Dam Height (m)</label>
+                <input class= "form-control" type="number" id="height" name="height" step="any" required> 
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="alert alert-warning my-3" id="alert"></div>
+          </div>
+          <button id="submitButton" type="submit" class="btn btn-lg btn-primary my-3 mb-4 px-5" disabled>Calculate</button>
+        </form>
+        <p>
+          <a href="./about.html#limitations-disclaimers">Limitations and disclaimers</a>
+        </p>
+      </div>
+      <div class="col-md-12 col-lg-8">
+        <div class="card">
+          <div class="card-header">
+            <strong>Calculation Output</strong>
+          </div>
+          <div class="card-body">
+            <div id="graph"></div>
+            <hr>
+            <div class="row">
+              <div class="col">
+                <label class= "form-text mb-1"><strong>DBI</strong></label>
+                <div id="dbi-output" class="p-2 mb-3 rounded bg-light w-100">&nbsp;</div>
+              </div>
+              <div class="col">
+                <label class= "form-text mb-1"><strong>Probability of failure</strong></label>
+                <div id="pof-output" class="p-2 mb-3 rounded bg-light w-100">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>     
+  </div>
+  <script src="main.js"></script>
+  <script src="./assets/bootstrap/bootstrap.v5.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.v5.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap/geonet.v7.css">
+  <link rel="stylesheet" href="./assets/font/font-awesome.min.css">
+
+  <title>Tools:DBI</title>
+</head>
+<body>
+  <div class="container pt-1">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12">
+        <h3>DBI (Dimensionless Blockage Index)</h3>
+        <p>The Dimensionless Blockage Index (DBI) tool indicates how stable a landslide dam is, given dam height and volume, and catchment area upstream of the dam.</p>
+        <ul class="nav nav-tabs">
+          <li class="nav-item secondary-tab">
+              <a class="nav-link " href="./about.html">About</a>
+          </li>
+          <li class="nav-item secondary-tab">
+              <a class="nav-link " href="./tool.html">Tool</a>
+          </li>
+          <li class="nav-item secondary-tab">
+            <a class="nav-link active" href="./user-guide.html">User Guide</a>
+          </li>
+        </ul>
+        <br/>
+      </div>
+    </div>
+    <div class="markdown-body">
+      <h4>Introduction</h4>
+      <hr class="section">
+      <p>
+        Estimating the probability of potential landslide dam failure is an important yet highly uncertain component of natural hazard emergency management. Using the DBI to determine potential landslide dam failure probability requires site-specific information for a dam case study.									
+      </p>
+      <h4>1. Enter the Upstream Catchment Area (m<sup>2</sup>)</h4>
+      <hr class="section">
+      <p>
+        Determine the catchment area of the watercourse blocked by a given landslide dam. This parameter should be in m<sup>2</sup> for our tool, and is the catchment area of the watercourse above the landslide dam, not the area of the entire catchment.
+      </p>
+      <h4>2. Enter the Landslide Dam Volume (m<sup>3</sup>)</h4>
+      <hr class="section">
+      <p>
+        The landslide dam volume is the most uncertain parameter in the Tool. It is best determined by differencing pre and post-landslide dam event elevation models. However, these datasets are usually not available. Manual estimation of dam volume (not landslide volume) or volume-area scaling relationships may be used. We recommend entering a range of dam volumes to output a range of probabilities of failure.									
+      </p>
+      <h4>3. Enter the Landslide Dam Height (m)</h4>
+      <hr class="section">
+      <p>
+        The landslide dam height is most reliably estimated manually, either from site visits or interpreting remote sensing data if available. The maximum dam height (from river level to highest point on landslide dam) should be used.
+      </p>
+      <h4>Examples</h4>
+      <hr class="section">
+      <div class="figure my-3 mx-auto d-block text-center">
+        <img src="./assets/images/examples.png" class="img-fluid">
+      </div>
+  </div>
+  <script src="./assets/bootstrap/bootstrap.v5.bundle.min.js"></script>
+</body>
+</html>
+
